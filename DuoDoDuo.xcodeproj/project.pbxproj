@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61CDB0B2DAE168E7B5180DBE /* Pods_DuoDoDuo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CDB0CB0822BE20FDE4D725A /* Pods_DuoDoDuo.framework */; };
 		640122FF257A2EE6005A5506 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640122FE257A2EE6005A5506 /* AppDelegate.swift */; };
 		64012301257A2EE6005A5506 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64012300257A2EE6005A5506 /* SceneDelegate.swift */; };
 		64012303257A2EE6005A5506 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64012302257A2EE6005A5506 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2609B3B069BC8FE4BA9C09D9 /* Pods-DuoDoDuo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuoDoDuo.debug.xcconfig"; path = "Target Support Files/Pods-DuoDoDuo/Pods-DuoDoDuo.debug.xcconfig"; sourceTree = "<group>"; };
+		3CDB0CB0822BE20FDE4D725A /* Pods_DuoDoDuo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DuoDoDuo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		640122FB257A2EE6005A5506 /* DuoDoDuo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuoDoDuo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		640122FE257A2EE6005A5506 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64012300257A2EE6005A5506 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		64012307257A2EE7005A5506 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6401230A257A2EE7005A5506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6401230C257A2EE7005A5506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DF7601ECE9E3A64E2DC4332 /* Pods-DuoDoDuo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuoDoDuo.release.xcconfig"; path = "Target Support Files/Pods-DuoDoDuo/Pods-DuoDoDuo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61CDB0B2DAE168E7B5180DBE /* Pods_DuoDoDuo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E942A12DED01C103680F664 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CDB0CB0822BE20FDE4D725A /* Pods_DuoDoDuo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		640122F2257A2EE6005A5506 = {
 			isa = PBXGroup;
 			children = (
 				640122FD257A2EE6005A5506 /* DuoDoDuo */,
 				640122FC257A2EE6005A5506 /* Products */,
+				7FC977293555F100D3B3D488 /* Pods */,
+				1E942A12DED01C103680F664 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = DuoDoDuo;
 			sourceTree = "<group>";
 		};
+		7FC977293555F100D3B3D488 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2609B3B069BC8FE4BA9C09D9 /* Pods-DuoDoDuo.debug.xcconfig */,
+				6DF7601ECE9E3A64E2DC4332 /* Pods-DuoDoDuo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6401230F257A2EE7005A5506 /* Build configuration list for PBXNativeTarget "DuoDoDuo" */;
 			buildPhases = (
+				1627EEF5320A93A1F00EDFAB /* [CP] Check Pods Manifest.lock */,
 				640122F7257A2EE6005A5506 /* Sources */,
 				640122F8257A2EE6005A5506 /* Frameworks */,
 				640122F9257A2EE6005A5506 /* Resources */,
+				A729D16F6374DFD3B8B6155E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1627EEF5320A93A1F00EDFAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DuoDoDuo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A729D16F6374DFD3B8B6155E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DuoDoDuo/Pods-DuoDoDuo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DuoDoDuo/Pods-DuoDoDuo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DuoDoDuo/Pods-DuoDoDuo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		640122F7257A2EE6005A5506 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		64012310257A2EE7005A5506 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2609B3B069BC8FE4BA9C09D9 /* Pods-DuoDoDuo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		64012311257A2EE7005A5506 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DF7601ECE9E3A64E2DC4332 /* Pods-DuoDoDuo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
