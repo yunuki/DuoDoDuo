@@ -3,17 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		61CDB0B2DAE168E7B5180DBE /* Pods_DuoDoDuo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CDB0CB0822BE20FDE4D725A /* Pods_DuoDoDuo.framework */; };
 		640122FF257A2EE6005A5506 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640122FE257A2EE6005A5506 /* AppDelegate.swift */; };
 		64012301257A2EE6005A5506 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64012300257A2EE6005A5506 /* SceneDelegate.swift */; };
-		64012303257A2EE6005A5506 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64012302257A2EE6005A5506 /* ViewController.swift */; };
 		64012306257A2EE6005A5506 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64012304257A2EE6005A5506 /* Main.storyboard */; };
 		64012308257A2EE7005A5506 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64012307257A2EE7005A5506 /* Assets.xcassets */; };
 		6401230B257A2EE7005A5506 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64012309257A2EE7005A5506 /* LaunchScreen.storyboard */; };
+		64012315257A305F005A5506 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64012314257A305F005A5506 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,11 +22,11 @@
 		640122FB257A2EE6005A5506 /* DuoDoDuo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuoDoDuo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		640122FE257A2EE6005A5506 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64012300257A2EE6005A5506 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		64012302257A2EE6005A5506 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		64012305257A2EE6005A5506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		64012307257A2EE7005A5506 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6401230A257A2EE7005A5506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6401230C257A2EE7005A5506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64012314257A305F005A5506 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = SOURCE_ROOT; };
 		6DF7601ECE9E3A64E2DC4332 /* Pods-DuoDoDuo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuoDoDuo.release.xcconfig"; path = "Target Support Files/Pods-DuoDoDuo/Pods-DuoDoDuo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,7 +73,7 @@
 			children = (
 				640122FE257A2EE6005A5506 /* AppDelegate.swift */,
 				64012300257A2EE6005A5506 /* SceneDelegate.swift */,
-				64012302257A2EE6005A5506 /* ViewController.swift */,
+				64012314257A305F005A5506 /* MainViewController.swift */,
 				64012304257A2EE6005A5506 /* Main.storyboard */,
 				64012307257A2EE7005A5506 /* Assets.xcassets */,
 				64012309257A2EE7005A5506 /* LaunchScreen.storyboard */,
@@ -88,7 +88,6 @@
 				2609B3B069BC8FE4BA9C09D9 /* Pods-DuoDoDuo.debug.xcconfig */,
 				6DF7601ECE9E3A64E2DC4332 /* Pods-DuoDoDuo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,7 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64012303257A2EE6005A5506 /* ViewController.swift in Sources */,
+				64012315257A305F005A5506 /* MainViewController.swift in Sources */,
 				640122FF257A2EE6005A5506 /* AppDelegate.swift in Sources */,
 				64012301257A2EE6005A5506 /* SceneDelegate.swift in Sources */,
 			);
