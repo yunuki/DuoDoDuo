@@ -38,6 +38,8 @@ class MainViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
         return img
     }()
     
+    var isTapped = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(logoImg)
@@ -52,7 +54,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
             make.top.equalTo(logoImg.snp.bottom).offset(50)
             make.centerX.equalToSuperview()
             make.width.equalToSuperview().offset(-40)
-            make.height.equalTo(200)
+            make.height.equalTo(40)
         }
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { (make) in
@@ -61,6 +63,25 @@ class MainViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
             make.left.equalToSuperview().offset(20)
             make.right.equalToSuperview().offset(-20)
         }
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapAction(_:)))
+        searchView.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func tapAction(_ tapGestureRecognizer: UITapGestureRecognizer) {
+        UIView.animate(withDuration: 0.3) {
+            if self.isTapped {
+                self.searchView.snp.updateConstraints { (make) in
+                    make.height.equalTo(40)
+                }
+            } else {
+                self.searchView.snp.updateConstraints { (make) in
+                    make.height.equalTo(200)
+                }
+            }
+            self.view.layoutIfNeeded()
+        }
+
+        isTapped = !isTapped
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -93,7 +114,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
                     make.top.equalTo(self.logoImg.snp.bottom).offset(50)
                     make.centerX.equalToSuperview()
                     make.width.equalToSuperview().offset(-40)
-                    make.height.equalTo(200)
+                    make.height.equalTo(self.isTapped ? 200 : 40)
                 }
                 self.collectionView.snp.remakeConstraints { (make) in
                     make.top.equalTo(self.searchView.snp.bottom).offset(50)
@@ -112,7 +133,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
                 self.searchView.snp.remakeConstraints { (make) in
                     make.centerX.equalToSuperview()
                     make.width.equalToSuperview().offset(-40)
-                    make.height.equalTo(200)
+                    make.height.equalTo(self.isTapped ? 200 : 40)
                     make.bottom.equalTo(self.view.snp.top)
                 }
                 self.collectionView.snp.remakeConstraints { (make) in
